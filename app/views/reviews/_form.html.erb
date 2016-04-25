@@ -1,0 +1,21 @@
+<%= form_for @review do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <h2>errors:</h2>
+        <% @review.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+      </ul>
+    </div>
+  <% end  %>
+
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ <% end %>

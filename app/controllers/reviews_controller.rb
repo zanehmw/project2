@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    cleaned_params = params.require(:comment).permit(:comment, :post_id)
+    cleaned_params = params.require(:review).permit(:comment, :post_id)
     @review = Review.find(params[:id])
     if @review.update(cleaned_params)
       redirect_to @review.restaurant
