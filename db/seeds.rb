@@ -17,8 +17,8 @@ res3 = Restaurant.create(name: "Chipotle", address: "40 Everywhere Drive", photo
 res4 = Restaurant.create(name: "Mi Lindo Peru", address: "123 Somewhere SF", photo_url: "http://www.latinlife.com/media/tinymce-images/mi-lindo-peru-san-francisco.jpg", category: cat2)
 res5 = Restaurant.create(name: "IHOP", address: "78 Everywhere Lane", photo_url: "https://c2.staticflickr.com/4/3887/15079362747_5937d5f757_o.jpg", category: cat7)
 res6 = Restaurant.create(name: "Applebees", address: "23 Beesting Lane", photo_url: "http://www.restaurantnews.com/wp-content/uploads/2015/11/Applebees-Recognizes-Top-Performing-Franchisee-And-Vendor-at-2015-National-Conference.jpg", category: cat3)
-res6 = Restaurant.create(name: "Pegasus Coffee", address: "90 Seattle Somewhere Road", photo_url: "http://4.bp.blogspot.com/-iMpGZ7t_KF4/T0wK0cOOCDI/AAAAAAAAFps/FuaILBTLlUw/s640/IMG_8012.JPG", category: cat6)
-res6 = Restaurant.create(name: "Street Sweets", address: "150 NewYorkish Drive", photo_url: "http://www.jazzhostels.com/blog/wp-content/uploads/2015/10/New-York-City-Food-Truck.png", category: cat8)
+res7 = Restaurant.create(name: "Pegasus Coffee", address: "90 Seattle Somewhere Road", photo_url: "http://4.bp.blogspot.com/-iMpGZ7t_KF4/T0wK0cOOCDI/AAAAAAAAFps/FuaILBTLlUw/s640/IMG_8012.JPG", category: cat6)
+res8 = Restaurant.create(name: "Street Sweets", address: "150 NewYorkish Drive", photo_url: "http://www.jazzhostels.com/blog/wp-content/uploads/2015/10/New-York-City-Food-Truck.png", category: cat8)
 
 Review.create(comment: "They have amazing food, nice waiters too!", restaurant: res1)
 Review.create(comment: "Too expensive, food wasn't well-seasoned", restaurant: res2)
