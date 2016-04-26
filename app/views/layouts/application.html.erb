@@ -9,10 +9,12 @@
 <body>
 
   <div id="wrapper">
-  <h1>eat</h1>
+  <h1 id="title">eat</h1>
   <%= link_to "HOME", root_path %>
   <%= link_to "ALL RESTAURANTS", restaurants_path %>
-  <%= link_to "NEW", new_restaurant_path %>
+  <%= link_to "ADD NEW RESTAURANT", new_restaurant_path %>
+  <%= link_to "CATEGORIES", categories_path %>
+
   </div>
 
 <%= yield %>

@@ -1,4 +1,10 @@
-<h2 class="show_name">  <%= @restaurant.name.upcase %> <%= link_to "(edit)", edit_restaurant_path %> </h2>
+<h2 class="show_name">
+  <%= @restaurant.name.upcase %>
+  <%= link_to "(edit)", edit_restaurant_path %>
+  <%= link_to '(delete)', restaurant_path,
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+</h2>
 <p><%= @restaurant.address %></p>
 <p><%= image_tag (@restaurant.photo_url) %></p>
 <h3 class="reviews_title"> REVIEWS:</h3>
@@ -16,7 +22,6 @@
 
 
 <%= form_for Review.new do |f| %>
-  <p><%= f.label :comment %><br></p>
   <%= f.text_area :comment %>
   <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
 

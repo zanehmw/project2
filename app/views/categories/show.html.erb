@@ -1,0 +1,15 @@
+<h2><%= @category.category %></h2>
+<p>
+  <%= link_to '(Delete Category)', category_path,
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+</p>
+
+<div class="categories_show">
+<% @category.restaurants.each do |cat| %>
+  <h3><%= cat.name %></h3>
+  <p><%= cat.address %></p>
+  <p><%= image_tag (cat.photo_url) %></p>
+
+<% end %>
+</div>

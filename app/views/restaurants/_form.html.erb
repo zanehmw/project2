@@ -25,6 +25,12 @@
   </p>
 
   <p>
+    <%= f.label :category_id %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :category %>
+  </p>
+
+
+  <p>
     <%= f.submit %>
   </p>
  <% end %>
