@@ -4,6 +4,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.string :photo_url
+      t.integer :category_id
 
       t.timestamps null: false
     end

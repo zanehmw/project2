@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <div id="wrapper">
-  <header class="app_logo">BIGLOGOHERE</header>
+  <h1>eat</h1>
   <%= link_to "HOME", root_path %>
   <%= link_to "ALL RESTAURANTS", restaurants_path %>
   <%= link_to "NEW", new_restaurant_path %>
   </div>
+
 <%= yield %>
 
 </body>
