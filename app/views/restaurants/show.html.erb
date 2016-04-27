@@ -15,9 +15,6 @@
 <p></p>
 <% end %> -->
 
-
-
-
 <%= form_for [@restaurant,@rating] do |f| %>
 <%= f.text_field :value %>
 <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
