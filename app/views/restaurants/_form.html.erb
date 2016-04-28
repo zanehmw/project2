@@ -1,13 +1,13 @@
 <%= form_for @restaurant do |f| %>
   <% if @restaurant.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-        <h2>errors:</h2>
-        <% @restaurant.errors.full_messages.each do |message| %>
-          <p><%= message %></p>
-        <% end %>
-      </ul>
-    </div>
+  <div id="error_explanation">
+    <ul>
+      <h2>errors:</h2>
+      <% @restaurant.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+      <% end %>
+    </ul>
+  </div>
   <% end  %>
   <p>
     <%= f.label :name %><br>
@@ -33,8 +33,8 @@
     <%= f.collection_select :category_id, Category.all, :id, :category %>
   </p>
 
-
   <p>
     <%= f.submit %>
   </p>
- <% end %>
+  
+<% end %>

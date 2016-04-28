@@ -33,6 +33,5 @@
 <%= form_for Review.new do |f| %>
   <%= f.text_area :comment %>
   <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
-
   <%= f.submit %>
 <% end %>

@@ -1,7 +1,6 @@
 <h2>Restaurant Categories</h2>
-
 <%= link_to "Add a new Category", new_category_path %>
 
 <% @categories.each do |cat| %>
-<p><%= link_to cat.category, category_path(cat) %></p>
+  <p><%= link_to cat.category, category_path(cat) %></p>
 <% end %>
