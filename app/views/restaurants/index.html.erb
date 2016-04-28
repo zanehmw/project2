@@ -3,8 +3,15 @@
 <%= link_to "NEW", new_restaurant_path %>
 
 <% @restaurants.each do |restaurant| %>
-<h3><%= restaurant.name %></h3>
-<p><%= restaurant.address %></p>
-<p><%= link_to "Show", restaurant_path(restaurant) %></p>
-<p><%= image_tag(restaurant.photo_url) %></p>
+<div class="container">
+
+  <div class="wcontainer">
+    <h3><%= restaurant.name %></h3>
+    <p><%= restaurant.address %></p>
+    <p><%= link_to "Show", restaurant_path(restaurant) %></p>
+  </div>
+  <div class="icontainer">
+  <p><%= image_tag(restaurant.photo_url) %></p>
+  </div>
+</div>
 <% end %>

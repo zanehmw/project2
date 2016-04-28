@@ -10,13 +10,8 @@
 
 <h3 class="ratings_title"> Average Rating: <%= @restaurant.average_rating %> </h3>
 
-<!-- <% @restaurant.ratings.each do |z| %>
-<p><%= z.value %></p>
-<p></p>
-<% end %> -->
-
 <%= form_for [@restaurant,@rating] do |f| %>
-<%= f.text_field :value %>
+<%= f.select(:value, 1..10) %>
 <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
 <%= f.submit "Rate this Restaurant" %>
 <% end %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project2</title>
+  <title>RESREV</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -18,11 +18,11 @@
   <span class= "authentication">
 
     <% if current_user %>
-      Logged in as: <%= current_user.username %>
-      <%= link_to "Sign Out", signout_path %>
+       <%= link_to current_user.username, user_path(current_user) %>
+      <%= link_to "SIGN OUT", signout_path %>
     <% else %>
-      <%= link_to "Sign In", signin_path %>
-      <%= link_to "Sign Up", signup_path %>
+      <%= link_to "SIGN IN", signin_path %>
+      <%= link_to "SIGN UP", signup_path %>
     <% end %>
   </span>
 </nav>
@@ -33,7 +33,9 @@
   </p>
 <% end %>
 
+<div class="input">
 <%= yield %>
+</div>
 
 </body>
 </html>
