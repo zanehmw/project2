@@ -1,6 +1,8 @@
 Category.destroy_all
 Restaurant.destroy_all
 Review.destroy_all
+Rating.destroy_all
+User.destroy_all
 
 cat1 = Category.create(category: "Fast Food")
 cat2 = Category.create(category: "Ethnic")
@@ -25,3 +27,12 @@ Review.create(comment: "Too expensive, food wasn't well-seasoned", restaurant: r
 Review.create(comment: "Amazing, I ate until my shirt exploded", restaurant: res3)
 Review.create(comment: "Too many people here on the weekends", restaurant: res3)
 Review.create(comment: "Tastes like home (I am from Peru)", restaurant: res4)
+
+Rating.create(value: 5.5, restaurant: res1)
+Rating.create(value: 5.5, restaurant: res2)
+Rating.create(value: 5.5, restaurant: res3)
+Rating.create(value: 5.5, restaurant: res4)
+Rating.create(value: 5.5, restaurant: res5)
+Rating.create(value: 5.5, restaurant: res6)
+Rating.create(value: 5.5, restaurant: res7)
+Rating.create(value: 5.5, restaurant: res8)
