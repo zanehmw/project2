@@ -10,11 +10,20 @@
 
 <h3 class="ratings_title"> Average Rating: <%= @restaurant.average_rating %> </h3>
 
+<!-- don't forget to indent inside a form_for do ... end block. -->
 <%= form_for [@restaurant,@rating] do |f| %>
 <%= f.select(:value, 1..10) %>
+<!--  you have redundant info because you used nested routes for the ratings inside restaurants
+(note the form_for above has two attributes), but also you're passing in restaurant_id here as well
+best practice would be to do one or the other.
+-->
 <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
 <%= f.submit "Rate this Restaurant" %>
 <% end %>
+<!--
+Would also be nice if you showed a count of how many 1s, 2s, 3s, etc
+a restaurant has gotten in terms of ratings.
+-->
 
 
 <h3 class="reviews_title"> REVIEWS:</h3>
@@ -30,6 +39,7 @@
 <% end %>
 </div>
 
+<!--  why not use the review partial here? -->
 <%= form_for Review.new do |f| %>
   <%= f.text_area :comment %>
   <%= f.hidden_field :restaurant_id, value: @restaurant.id %>

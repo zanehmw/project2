@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+// this looks like leftover test code! Make sure to keep your codebase clean!
 $(document).ready(function(){
   $("#title").on("click", function() {
     alert("hello")

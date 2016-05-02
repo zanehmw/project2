@@ -28,6 +28,16 @@ Review.create(comment: "Amazing, I ate until my shirt exploded", restaurant: res
 Review.create(comment: "Too many people here on the weekends", restaurant: res3)
 Review.create(comment: "Tastes like home (I am from Peru)", restaurant: res4)
 
+# suggest creating data that's a bit more random (e.g. picking a random number between
+# 1 and 10 for each rating.... here's an example of how I might more easily generate
+# a bunch of random reviews:
+Restaurant.all.each do |current_restaurant|
+  num_times = rand(20)
+  num_times.times do
+    Rating.create(value: rand(10), restaurant: current_restaurant)
+  end
+end
+
 Rating.create(value: 5.5, restaurant: res1)
 Rating.create(value: 5.5, restaurant: res2)
 Rating.create(value: 5.5, restaurant: res3)
