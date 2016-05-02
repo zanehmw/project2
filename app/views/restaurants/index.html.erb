@@ -3,6 +3,8 @@
 <% @restaurants.each do |restaurant| %>
   <div class="container">
 
+  <!--  looks like you're not using these wcontainer / icontainer classes... suggest
+  removing them. (also, if you were to use them, I'd suggest changing them to be more descriptive)-->
     <div class="wcontainer">
       <h3><%= restaurant.name %></h3>
       <p><%= restaurant.address %></p>

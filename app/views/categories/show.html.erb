@@ -6,6 +6,8 @@
 </p>
 
 <div class="categories_show">
+<!-- this local variable `cat` is confusing since you're iterating over
+restaurants. I believe 'restaurant' would be a better variable name here. -->
 <% @category.restaurants.each do |cat| %>
   <h3><%= cat.name %></h3>
   <p><%= cat.address %></p>
