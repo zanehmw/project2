@@ -98,6 +98,14 @@ a.no-fav {
  color: black;
 }
 
+.bigpic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  width: 600px;
+  height: 300px;
+}
 .fav:visited, .no-fav:visited {
  text-decoration: none;
 }
